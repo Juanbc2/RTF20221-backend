@@ -3,8 +3,6 @@ package com.udea.matricula.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,9 +33,9 @@ public class Grado implements Serializable {
   private Long idGrado;
 
   // nombre de grado
-  @ApiModelProperty(notes = "Nombre")
-  @Column(name = "nombre", nullable = false, length = 80)
-  private @NonNull String nombre;
+  @ApiModelProperty(notes = "Grado")
+  @Column(name = "grade", nullable = false, length = 80)
+  private @NonNull String grade;
 
   // cupos de grado
   @ApiModelProperty(notes = "Cupos")
@@ -49,9 +47,6 @@ public class Grado implements Serializable {
   @Column(name = "ocupacion", nullable = false, length = 80)
   private @NonNull int ocupacion;
 
-  // descripcion
-  @ApiModelProperty(notes = "Descripcion")
-  @Column(name = "descripcion", nullable = false, length = 80)
-  private String descripcion;
+
 
 }
