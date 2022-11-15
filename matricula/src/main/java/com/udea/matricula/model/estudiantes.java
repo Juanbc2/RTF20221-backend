@@ -42,25 +42,25 @@ public class estudiantes implements Serializable {
     private @NonNull String lastName;
 
     @ApiModelProperty(notes = "Grado")
-    @Column(name="grade", nullable=false, length=20)
-    private @NonNull String grade; 
+    @Column(name = "grade", nullable = false, length = 80)
+    private @NonNull String grade;
 
     @ApiModelProperty(notes = "Documento")
-    @Column(name="pid", nullable=false, length=20)
-    private int pid; 
+    @Column(name = "pid", nullable = false, length = 80)
+    private int pid;
     @ApiModelProperty(notes = "Dirección")
     @Column(name = "address", nullable = false, length = 80)
     private @NonNull String address;
     @ApiModelProperty(notes = "Fecha de nacimiento")
-    @Column(name = "birthday", nullable = false, length = 30)
+    @Column(name = "birthday", nullable = false, length = 80)
     private @NonNull Date birthday;
 
     @ApiModelProperty(notes = "Nombre del acudiente")
-    @Column(name="nameacc", nullable=false, length=80)
+    @Column(name = "nameacc", nullable = false, length = 80)
     private @NonNull String nameacc;
 
     @ApiModelProperty(notes = "Documento del acudiente")
-    @Column(name="pidacc", nullable=false, length=20)
+    @Column(name = "pidacc", nullable = false, length = 80)
     private int pidacc;
 
     @ApiModelProperty(notes = "Correo del acudiente")
@@ -68,15 +68,15 @@ public class estudiantes implements Serializable {
     private @NonNull String email;
 
     @ApiModelProperty(notes = "Teléfono")
-    @Column(name = "telephone", nullable = false, length = 20)
-    private int telephone;
+    @Column(name = "telephone", nullable = false, length = 80)
+    private Long telephone;
 
     @ApiModelProperty(notes = "Teléfono alterno del acudiente")
-    @Column(name = "alttelephone", nullable = false, length = 20)
-    private int alttelephone;
+    @Column(name = "alttelephone", nullable = false, length = 80)
+    private Long alttelephone;
 
     @ApiModelProperty(notes = "EPS")
-    @Column(name = "eps", nullable = false, length = 20)
+    @Column(name = "eps", nullable = false, length = 80)
     private @NonNull String eps;
 
     @ApiModelProperty(notes = "Estrato")

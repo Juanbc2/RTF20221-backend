@@ -59,16 +59,20 @@ public class GradoController {
   }
 
   @GetMapping("/sumGrade/{grado}")
-  public void sumGrade(@ApiParam(value = "sumar 1 a la ocupación", required = true) @RequestBody String grado) {
+  public int sumGrade(
+      @ApiParam(value = "sumar 1 a la ocupación", required = true) @PathVariable("grado") String grado) {
     List<Grado> antiguos = (List<Grado>) GradoService.list();
+    int newOcupacion = -1;
     for (Grado Grado : antiguos) {
       if (Grado.getOcupacion() < Grado.getCupos() && Grado.getGrade().equals(grado)) {
         int oldOcupacion = Grado.getOcupacion();
-        int newOcupacion = oldOcupacion + 1;
+        newOcupacion = oldOcupacion + 1;
         Grado.setOcupacion(newOcupacion);
-        break;
+        GradoService.refreshAll(antiguos);
+        return newOcupacion;
       }
     }
+    return newOcupacion;
   }
 
 }

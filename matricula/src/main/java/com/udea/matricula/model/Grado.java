@@ -22,7 +22,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@ApiModel(description = "All details about the grado. ")
+@ApiModel(description = "All details about the grado.")
 @Entity
 
 public class Grado implements Serializable {
